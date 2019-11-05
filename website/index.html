@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Megaleio</title>
+	<link rel = "icon" type = "image/png" href = "images/logo.jpg">
+    <!-- For apple devices -->
+    <link rel = "apple-touch-icon" type = "image/png" href = "images/logo.jpg"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="main.css"/>
+</head>
+<body onload="myFunction()">
+	<div id="loading">
+		<div class="container">
+        <div class="glow"> 
+            <svg id="logo"  width="40vh" height="50vh" viewBox="0 0 707 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                
+                <path d="M108.6 4.2V108H94.95V30.6L60.45 108H50.85L16.2 30.45V108H2.54999V4.2H17.25L55.65 90L94.05 4.2H108.6Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                <path d="M145.399 14.55V49.5H183.499V60.75H145.399V96.75H187.999V108H131.749V3.30001H187.999V14.55H145.399Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                <path d="M287.854 33.75C284.954 27.65 280.754 22.95 275.254 19.65C269.754 16.25 263.354 14.55 256.054 14.55C248.754 14.55 242.153 16.25 236.253 19.65C230.453 22.95 225.854 27.75 222.454 34.05C219.154 40.25 217.503 47.45 217.503 55.65C217.503 63.85 219.154 71.05 222.454 77.25C225.854 83.45 230.453 88.25 236.253 91.65C242.153 94.95 248.754 96.6 256.054 96.6C266.254 96.6 274.654 93.55 281.254 87.45C287.854 81.35 291.704 73.1 292.804 62.7H251.104V51.6H307.354V62.1C306.554 70.7 303.854 78.6 299.254 85.8C294.654 92.9 288.604 98.55 281.104 102.75C273.604 106.85 265.254 108.9 256.054 108.9C246.354 108.9 237.503 106.65 229.503 102.15C221.503 97.55 215.154 91.2 210.454 83.1C205.854 75 203.553 65.85 203.553 55.65C203.553 45.45 205.854 36.3 210.454 28.2C215.154 20 221.503 13.65 229.503 9.15C237.503 4.55 246.354 2.25 256.054 2.25C267.154 2.25 276.954 5 285.454 10.5C294.054 16 300.304 23.75 304.204 33.75H287.854Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                <path d="M387.202 84.75H341.602L333.202 108H318.802L356.602 4.05H372.352L410.002 108H395.602L387.202 84.75ZM383.302 73.65L364.402 20.85L345.502 73.65H383.302Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                <path d="M440.126 96.9H476.726V108H426.476V3.45H440.126V96.9Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                <path d="M504.872 14.55V49.5H542.972V60.75H504.872V96.75H547.472V108H491.222V3.30001H547.472V14.55H504.872Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                <path d="M581.776 3.45V108H568.126V3.45H581.776Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                <path d="M652.44 109.05C642.74 109.05 633.89 106.8 625.89 102.3C617.89 97.7 611.54 91.35 606.84 83.25C602.24 75.05 599.94 65.85 599.94 55.65C599.94 45.45 602.24 36.3 606.84 28.2C611.54 20 617.89 13.65 625.89 9.15C633.89 4.55 642.74 2.25 652.44 2.25C662.24 2.25 671.14 4.55 679.14 9.15C687.14 13.65 693.44 19.95 698.04 28.05C702.64 36.15 704.94 45.35 704.94 55.65C704.94 65.95 702.64 75.15 698.04 83.25C693.44 91.35 687.14 97.7 679.14 102.3C671.14 106.8 662.24 109.05 652.44 109.05ZM652.44 97.2C659.74 97.2 666.29 95.5 672.09 92.1C677.99 88.7 682.59 83.85 685.89 77.55C689.29 71.25 690.99 63.95 690.99 55.65C690.99 47.25 689.29 39.95 685.89 33.75C682.59 27.45 678.04 22.6 672.24 19.2C666.44 15.8 659.84 14.1 652.44 14.1C645.04 14.1 638.44 15.8 632.64 19.2C626.84 22.6 622.24 27.45 618.84 33.75C615.54 39.95 613.89 47.25 613.89 55.65C613.89 63.95 615.54 71.25 618.84 77.55C622.24 83.85 626.84 88.7 632.64 92.1C638.54 95.5 645.14 97.2 652.44 97.2Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                </svg>
+                <neon>Exploring Technology</neon><br>
+                </div> 
+               <!--- <h4>29-Jan-2020 to 31-Jan-2020</h4>--->
+
+            </div>
+            <script src="app.js"></script>
+	</div>
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="images/logo.jpg"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="#slider">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#promo">REGISTER</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#services">EVENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#testimonials">SPONSORS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">CONTACT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#team" >OUR TEAM</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+	</section>
+	<!-----slider----->
+	<div id="slider">
+		<div id="headerSlider" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+    <li data-target="#headerSlider" data-slide-to="1"></li>
+    <li data-target="#headerSlider" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/img1.jpg" class="d-block img-fluid">
+      <div class="carousel-caption">
+      	<h5>St. John college of engineering</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/logo.jpg" class="d-block img-fluid">
+      <div class="carousel-caption">
+      	<h5>St. John college of engineering</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/bkg.jpg" class="d-block img-fluid">
+      <div class="carousel-caption">
+      	<h5>St. John college of engineering</h5>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+	</div>
+	<!------------>
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>About us</h2>
+					<div class="about-content">
+						
+MEGALEIO is a technical event organized by<br>
+St.John College of Engineering and Management ( SJCEM ), Palghar.<br><br>
+
+The Event is planned and organized by student body of SJCEM.<br>
+"The basic idea of organizing this event is to provide a platform to the students at state and National level to showcase <br>their talent and provide information on latest technologies in Engineering".<br><br>
+
+The Event is inspired by owerwhelming response of the student of SJCEM during intra college technical festival,science fest<br>
+(Annual Technical Exhibition).Annual project will showcase the participation of the students in multiple national level competions.<br>
+We are hopeful that the initiative will bring a new era of<br>
+"Learning by Sharing" in vicinity of campus.<br>
+Students from other colleges are being invited to participate in the events.<br>
+<b>Megaleio-Exploring Technology<b><br>
+<i>Come-Compete-Conquer<i><br>
+					</div>
+					<button type="button" class="btn btn-primary">Know More>></button>
+				</div>
+				<div class="col-md-6 skills-bar">
+					
+					<p><b>2019<sup>TH</sup>PARTICIPATION</b></p><br>
+					<p><b>PUBG</b></p>
+					<div class="progress">
+						<div class="progress-bar" style="width: 80%;">80%</div>
+					</div>
+					<br>
+					<p><b>PUBG</b></p>
+					<div class="progress">
+						<div class="progress-bar" style="width: 85%;">85%</div>
+				</div><br>
+				<p><b>ROBOWAR</b></p>
+					<div class="progress">
+						<div class="progress-bar" style="width: 75%;">75%</div>
+			</div><br>
+			<p><b>C-DEBUGGING</b></p>
+			<div class="progress">
+						<div class="progress-bar" style="width: 50%;">50%</div>
+		</div>
+	</section>
+	<!------------------>
+	<section id="services">
+		<div class="container">
+			<h1><u>EVENTS</u></h1>
+			<div class="row services">
+				<div class="col-md-3 text-center">
+					<div class="icon">
+						<i class="fa fa-keyboard-o"></i>
+					</div>
+					<h2>Coding</h2>
+					<p>"The basic idea of organizing this event is to provide a platform to the students at state and National level to showcase their talent and provide information on latest technologies in Engineering".</p>
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="icon">
+						<i class="fa fa-keyboard-o"></i>
+					</div>
+					<h2>Coding</h2>
+					<p>"The basic idea of organizing this event is to provide a platform to the students at state and National level to showcase their talent and provide information on latest technologies in Engineering".</p>
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="icon">
+						<i class="fa fa-keyboard-o"></i>
+					</div>
+					<h2>Coding</h2>
+					<p>"The basic idea of organizing this event is to provide a platform to the students at state and National level to showcase their talent and provide information on latest technologies in Engineering".</p>
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="icon">
+						<i class="fa fa-keyboard-o"></i>
+					</div>
+					<h2>Coding</h2>
+					<p>"The basic idea of organizing this event is to provide a platform to the students at state and National level to showcase their talent and provide information on latest technologies in Engineering".</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-------------->
+	<section id="team">
+		<div class="container">
+			<h1>Our Team</h1>
+			<div class="row">
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="images/team1.jpg" class="img-responsive">
+						<ul>
+							<a href="#"><li><i class="fa fa-facebook"></i></li></a>
+							<a href="#"><li><i class="fa fa-twitter"></i></li></a>
+							<a href="#"><li><i class="fa fa-instagram"></i></li></a>
+						</ul>
+					</div>
+					<h2>Saket</h2>
+					<h3>Founder/Ceo</h3>
+					<p>provide information on latest technologies in Engineering</p>
+				</div>
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="images/team1.jpg" class="img-responsive">
+						<ul>
+							<a href="#"><li><i class="fa fa-facebook"></i></li></a>
+							<a href="#"><li><i class="fa fa-twitter"></i></li></a>
+							<a href="#"><li><i class="fa fa-instagram"></i></li></a>
+						</ul>
+					</div>
+					<h2>Akshay kumar</h2>
+					<h3>Founder/Ceo</h3>
+					<p>provide information on latest technologies in Engineering</p>
+				</div>
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="images/team1.jpg" class="img-responsive">
+						<ul>
+							<a href="#"><li><i class="fa fa-facebook"></i></li></a>
+							<a href="#"><li><i class="fa fa-twitter"></i></li></a>
+							<a href="#"><li><i class="fa fa-instagram"></i></li></a>
+						</ul>
+					</div>
+					<h2>Akshay kumar</h2>
+					<h3>Founder/Ceo</h3>
+					<p>provide information on latest technologies in Engineering</p>
+				</div>
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="images/team1.jpg" class="img-responsive">
+						<ul>
+							<a href="#"><li><i class="fa fa-facebook"></i></li></a>
+							<a href="#"><li><i class="fa fa-twitter"></i></li></a>
+							<a href="#"><li><i class="fa fa-instagram"></i></li></a>
+						</ul>
+					</div>
+					<h2>Akshay kumar</h2>
+					<h3>Founder/Ceo</h3>
+					<p>provide information on latest technologies in Engineering</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-------------------->
+	<section id="promo">
+		<div class="container">
+			<p>Register For the Event</p>
+			<a href="#" class="btn btn-primary">Contact Us</a>
+		</div>
+	</section>
+	<!--------------------------->
+	<section id="price">
+		<div class="container">
+			<h1>Rules For The Event</h1>
+			<center><p>1.The event is open for all. Participants have to carry their Institute identity card allong with them.<br>
+Participants who misbehave maybe asked to leave the event area.<br>
+2.Participants are required to take proper care that they are not damaging college campus or any college property.<br>
+3.Participants can bring their own laptops.<br>
+4.Participants are expected to be present at the event venue before the event commences, Late commers wont be entertatined.<br>
+5.Participants should not carry sharp tools.<br> 
+6.Organizers will not be responsible for any loss or damage of valueable items.<br>
+7.Organizing Committee's decision in any matter will be final and abiding on all.<br></p>
+			<a href="#"></a><button type="button" class="btn btn-primary" ><a href="#">Download pdf!!</a></button></center>
+		</div>
+	</section>
+	<!----<section id="testimonials">
+		<div class="container">
+			<h1>Sponsors</h1>
+			<p class="text-center"></p>
+		</div>
+	</section>
+	<section class="container-fluid" id="four">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                     <h2 class="text-center text-primary">Our Sponsors</h2>
+                    <hr><br>
+
+                        
+                             <h2 class="text-center text-primary">Title Sponsors</h2>
+                            <div class="media wow fadeInRight">
+                                <h3><center>SUVIDYA INSTITUTE OF TECHNOLOGY</center></h3>
+                                <center>
+                       <img src="images/s1.jpg"  height="70%" width="70%" alt="Cello " align="center"><br>
+                              </center> 
+                               </div>
+                            
+                             <h2 class="text-center text-primary">Co-Sponsors</h2>
+                        
+			<div class="media wow fadeInRight">
+                                <h3><center>CELLO DECENT HOMES</center></h3>
+                                <center>
+                       <img src="./assets/cello.jpg" height="50%" width="70%" alt="VIGO" align="center"><br>
+                              </center> 
+                               </div>
+
+			<div class="media wow fadeInRight">
+                                <h3><center>UPESH BARIA ENTERTAINMENT</center></h3>
+                                <center>
+                       <img src="./assets/upesh.jpg" height="30%" width="60%" alt="Upesh Baria" align="center"><br>
+                              </center> 
+                               </div>
+
+    
+			<div class="media wow fadeInRight">
+                                <h3><center>VIGO WORLD</center></h3>
+                                <center>
+                       <img src="./assets/vigo.jpg" height="50%" width="70%" alt="VIGO" align="center"><br>
+                              </center> 
+                               </div>
+
+                            <div class="media wow fadeInRight">
+                                <h3><center>MT EDUCARE</center></h3>
+                                <center>
+                       <img src="./assets/mtedu.jpg" height="30%" width="60%" alt="Upesh Baria" align="center"><br>
+                              </center> 
+                               </div>
+
+                           
+                             <h2 class="text-center text-primary">Banking Partner</h2>
+                            <div class="media wow fadeInRight">
+                                <h3><center>Karnataka Bank</center></h3>
+                                <div class="media-right">
+                           <img src="./assets/kb.png"   alt="Karnataka Bank " align="center">
+                                </div>
+                            
+                             <h2 class="text-center text-primary">Online Partners</h2>
+                            <div class="media wow fadeInRight">
+		<h3><center>KNOWAFEST.COM</center></h3>
+                <div class="media-right">
+                          <img src="./assets/kf.png"   alt="Know A Fest" align="center">
+                                </div>
+                          <div class="media wow fadeInRight">
+                                <h3><center>FESTPAV.COM</center></h3>
+                                <div class="media-right">
+                          <img src="./assets/fp.png"   alt="FestPav" align="center">
+                                </div>
+
+                          
+                             <h2 class="text-center text-primary">Other Sponsors</h2>
+                            <div class="media wow fadeInRight">
+                <h3><center>Crronics Technosolutions</center></h3>
+                        <div class="media wow fadeInRight">
+                                <center>
+                       <img src="./assets/crronics.png" height="40%" width="50%" alt="Crronics" align="center"><br>
+                              </center> 
+                               </div>
+
+
+                       
+                                <div class="media wow fadeInRight">
+                                <h3><center>Aradhana</center></h3>
+                                <div class="media-right">
+                          <img src="./assets/aradhana.jpg"   alt="Aradhana" align="center">
+                                </div>
+
+                               <div class="media wow fadeInRight">
+                                <h3><center>Mahesh Tutorials</center></h3>
+                                <div class="media-right">
+                          <img src="./assets/mt.jpg"   alt="Mahesh Tutorials" align="center">
+                                </div>
+
+
+                            
+
+
+     </div>
+  </div>
+</div>
+</section>---->
+       <section id="contact">
+       	<div class="container">
+       		<h1>Get In Touch</h1>
+       		<div class="row">
+       			<div class="col-sm-6">
+       				<form class="contact-form">
+       					<div class="form-group">
+       						<input type="text" class="form-control" placeholder="Your Name" name="f1">
+       					</div>
+       					<div class="form-group">
+       						<input type="number" class="form-control" placeholder="Your phone number" name="f2">
+       					</div>
+       					<div class="form-group">
+       						<input type="email" class="form-control" placeholder="Your Email-Id" name="f1">
+       					</div>
+       					<div class="form-group">
+       						<textarea class="form-control"  rows=4 placeholder="Your Message"></textarea>
+       						 
+       					</div>
+       					<button type="submit" class="btn btn-primary">Send Message</button>
+       				</form>
+       			</div>
+       			<div class="col-sm-6">
+       				<div class="follow">We are always available on the below address.<br><br><i class="fa fa-map-marker">Address:</i>
+       					<b>St.John College Of Engineering and Management.
+Vevoor,Palghar,
+Maharashtra,India</div>
+<div class="follow"><b></b><i class="fa fa-phone">Call Us on:</i>9956787654</div>
+<div class="follow"><i class="fa fa-envelope">Email Us:</i>
+       					saket247@gmail.com</div>
+<div class="follow"><i class="fa fa-whatsapp"><a href="#"></a></i>
+       
+</div>
+       			</div>
+       		</div>
+       	</div>
+       </section> 
+       <section id="footer">
+       	<div class="container text-center">
+       		<p>Made With<i class="fa fa-heart-o"></i>  by Saket</p>
+       	</div>
+       </section>     
+       <script src="js/smooth-scroll.js"></script> 
+       <script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>         
+
+<!-----<script type="text/javascript">
+	function countDown(secs,elem){
+		/*var element =document.getElementById(elem);*/
+		if(secs < 1)
+		{
+			clearTimeout(timer);
+			var preloader = document.getElementById('loading');
+
+	
+		}
+		secs--;
+		var timer =setTimeout('countDown('+secs+',"'+elem+'")',1000);
+	}
+</script>
+<div id="status">--->
+	<script type="text/javascript">
+		var preloader = document.getElementById('loading');
+		function myFunction(){
+				preloader.style.display = 'none';
+			}</script>
+
+<!---</div>
+<script type="text/javascript">countDown(10,"status");</script>--->
+</body>
+</html>

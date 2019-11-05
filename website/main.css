@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(32,35,48);
+}
+
+#logo{
+    position: absolute;
+    top : 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+#logo path:nth-child(1){
+stroke-dasharray: 786.3820190429688;
+stroke-dashoffset: 786;
+animation: line-anim 1s ease forwards;
+}
+#logo path:nth-child(2){
+    stroke-dasharray: 483.2999267578125;
+    stroke-dashoffset: 483;
+    animation: line-anim 1s ease forwards 0.5s;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 662.2030029296875;
+    stroke-dashoffset: 662;
+    animation: line-anim 1s ease forwards 0.6s;
+}
+#logo path:nth-child(4){
+    stroke-dasharray: 510.720947265625;
+    stroke-dashoffset: 510;
+    animation: line-anim 1s ease forwards 0.7s;
+}
+#logo path:nth-child(5){
+    stroke-dasharray: 309.6000061035156;
+    stroke-dashoffset: 309;
+    animation: line-anim 1s ease forwards 0.7s;
+}
+#logo path:nth-child(6){
+    stroke-dasharray: 483.2998962402344;
+    stroke-dashoffset: 483;
+    animation: line-anim 1s ease forwards 0.6s;
+}
+#logo path:nth-child(7){
+    stroke-dasharray: 236.40005493164062;
+    stroke-dashoffset: 236;
+    animation: line-anim 1s ease forwards 0.5s;
+}
+#logo path:nth-child(8){
+    stroke-dasharray: 589.5327758789062;
+    stroke-dashoffset: 589;
+    animation: line-anim 1s ease forwards ;
+}
+
+
+
+neon{
+    position: absolute;
+    top : 57%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+    text-shadow: 0 0 0.15em #1da9cc;
+    font-family: font-family: 'Montserrat', Arial, sans-serif;
+    color: #fff;
+    /*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    */
+    text-align: center;
+    animation: shake 2.5s linear forwards;
+    }
+
+h4{
+    position: absolute;
+    top : 59%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-family: font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2em;
+    color: #fff;
+}
+h3{
+    position: absolute;
+    color: #fff;
+    top : 30%;
+    left:50%;
+    font-family: font-family: 'Montserrat', Arial, sans-serif;
+    transform: translate(-50%,-50%);
+    font-size: 5em;
+}
+.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+
+
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+
