@@ -1,0 +1,440 @@
+body{
+	margin : 0;
+	padding: 0;
+	font-family : sans-serif;
+}
+.contact_us {
+	padding : 14px 16px;
+	text-align : center;
+	position : fixed;
+	z-index : 1;
+	border-radius : 50%;
+	cursor : pointer;
+	background : orange;
+	top : 30%;
+	right : 0;
+}
+
+
+.contact_menu {
+	display : block;
+	padding : 5px;
+	text-align : center;
+	position : fixed;
+	top : 30%;
+	right : 0;
+	width : 0px;
+	height: 0px;
+	z-index : 1;
+	border-radius : 10px;
+	cursor : pointer;
+	background : orange;
+	overflow : scroll;
+	transition : width 0.3s, height 0.3s;
+}
+
+
+.contact_menu form select, input, textarea{
+	padding : 4px 5px;
+	font-size : 16px;
+	border : 2px inset #fff;
+}
+
+.contact_menu form .sub_but {
+	padding : 20px 16px;
+	text-align : center;
+	color : grey;
+	font-size : 16px;
+	color: white;
+	background : green;
+	letter-spacing : 2px;
+	border-radius : 5px;
+	margin-bottom : 500px;
+	width : 100%;
+	cursor : pointer;
+	border : none;
+}
+
+.contact_menu form .sub_but:hover {
+	opacity : 0.6;
+}
+
+
+
+.contact_us:hover i{
+	animation : shake 0.9s infinite;
+}
+
+@keyframes shake {
+	0%	{
+		transform : translate(0px, 0px) rotate(0deg);
+	}
+	
+	25% {
+		transform : translate(1px, 1px) rotate(1deg);
+	}
+	
+	50% {
+		transform : translate(-1px, 1px) rotate(-1deg);
+	}
+	
+	70% {
+		transform : translate(1px, 1px) rotate(2deg);
+	}
+	
+	100% {
+		transform : translate(-1px, -1px) rotate(-1deg);
+	}
+}
+
+.f_nav {
+	background : black;
+	box-shadow : 0px 6px 10px 0 rgba(0, 0, 0, 0.25);
+	margin-bottom : 10px;
+}
+.f_nav ul {
+	padding  : 0;
+	margin : 0;
+	list-style-type : none;
+}
+
+
+.f_nav ul li {
+	display : inline-block;
+}
+
+.f_nav ul li a {
+	display : block;
+	padding : 14px 16px;
+	text-align : center;
+	text-decoration : none;
+	font-size : 16px;
+	color : white;
+	transition : 1s;
+}
+
+.flink::after {
+	content : '';
+	height : 2px;
+	width : 0;
+	background : #fff;
+	display : block;
+	transition : width 0.3s;
+}
+
+.flink:hover::after {
+	width : 100%;
+	transition : width 0.3s;
+}
+
+
+.f_nav ul li input {
+	border : none;
+	background : transparent;
+	color : white;
+	padding : 2px;
+	font-weight : bold;
+	font-size : 16px;
+	
+	
+}
+
+.f_nav ul li input:active {
+	border-bottom : 2px solid white;
+}
+
+
+
+img {
+	float : left;
+}
+
+.drop_menu {
+	float : left;
+	height : 150px;
+	vertical-align : center;
+	margin : 0px 1px;
+	cursor : pointer;
+}
+.drop_menu p{
+	padding : 14px 16px;	
+}
+
+.drop_menu:hover p{
+	background : linear-gradient(45deg, violet, indigo);
+	color : white;
+}
+
+.drop_menu .drop_content {
+	display : none;
+	box-shadow : 0px 8px 16px 0 rgba(0, 0, 0, 0.4);
+	z-index : 1;
+	
+}
+.drop_menu .drop_content ul {
+	list-style-type : none;
+	margin : 0;
+	padding : 0;
+}
+.drop_menu .drop_content li {
+	margin : 1px 0px;
+}
+.drop_menu .drop_content li a {
+	display : block;
+	text-decoration : none;
+	color : black;
+	background : yellow;
+	padding: 14px 16px;
+	text-align : center;
+	font-size : 16px;
+}
+
+#mark {
+	background : linear-gradient(45deg, red, yellow);
+	color : white;
+}
+
+.drop_menu .drop_content ul li a:hover {
+	background : linear-gradient(45deg, red, yellow);
+	color : white;
+}
+
+
+.drop_menu:hover .drop_content{
+	display : block;
+}
+
+.main_page {
+	position : relative;
+	clear : both;
+	z-index : -1;
+	height : 500px;
+	background : url(dubai.jpg) top left no-repeat;
+	background-size : cover;
+}
+
+.main_page h1{
+	position : absolute;
+	font-family : impact;
+	letter-spacing : 4px;
+	font-size : 70px;
+	font-weight : bold;
+	display : block;
+	height : 70px;
+	padding : 30px 0px;
+	top : 30%;
+	text-align : center;
+	z-index : 0;
+	width : 100%;
+	transform : translateY(-30%);
+	background : rgba(255, 255, 255, 1);
+	transform : 6s transition ease-in-out;
+	mix-blend-mode : overlay;
+	
+}
+
+.add_detail {
+	position : relative;
+	width : 100%;
+	margin : 80px 0px;
+	text-align : center;
+}
+
+.add_detail p {
+	font-size : 20px;
+	word-spacing : 4px;
+	color : grey;
+	line-height : 25px;
+	font-family : century gothic;
+}
+
+.add_detail h2 {
+	font-size : 50px;
+	font-family : impact;
+	padding : 0px 100px;
+}
+.olocation {
+	position : relative;
+	background : url(ourlocation.jpg) no-repeat;
+	background-size : cover;
+	width : 100%;
+	height : 600px;
+	text-align : center;
+	align-items : center;
+}
+
+.olocation h1 {
+	position : absolute;
+	top : 20%;
+	left : 50%;
+	font-size : 40px;
+	font-family : elephant;
+	font-weight : 100;
+	transform : translate(-50%, -20%);
+}
+
+.olocation .design {
+	position : absolute;
+	top : 60%;
+	left : 40%;
+	transform : translate(-40%, -60%);
+}
+
+.olocation .design .span{
+	display : block;
+	padding : 40px;
+	font-size  : 71px;
+	border-radius : 50%;
+	border : 1px solid black;
+	
+}
+
+
+
+.ftext {
+	clear : both;
+	position : relative;
+	margin-bottom : 80px;
+	
+}
+
+.ftext p{
+		font-weight : light;
+		font-size : 12px;
+		padding : 40px 40px 5px 40px;
+		text-align : center;
+		letter-spacing : 5px;
+}
+
+.ftext h1 {
+	font-size : 50px;
+	font-weight : 700;
+	padding : 5px 40px 40px 40px;
+	text-align : center;
+}
+.ftext ul {
+	
+	padding : 0;
+	margin : 0;
+	width : 100%;
+	list-style-type : none;
+}
+.ftext ul li {
+	display : inline-block;
+	width : 48%;
+	margin : 10px;
+	float : left;
+	box-sizing : border-box;
+}
+.ftext ul li a {
+	display : block;
+	background : linear-gradient(to right, black, violet);
+	text-decoration : none;
+	color : white;
+	border-radius : 2px;
+	padding : 14px 16px;
+	text-align : left;
+	transition : 0.3s;
+}
+
+.ftext ul li a:hover {
+	opacity : 0.6;
+}
+
+.fimage {
+	width : 100%;
+	height : 400px;
+	overflow : hidden;
+}
+
+.fimage img {
+	width : 100%;
+	height : 100%;
+	transition : 1s;
+}
+
+.fimage img:hover {
+	transform : scale(1.12);
+}
+body {
+	overflow-x : hidden;
+}
+
+.footer {
+	position : relative;
+	width : 100%;
+	height : 600px;
+	background : #2ecc71;
+}
+.footer .company_info {
+	color : white;
+	line-height : 18px;
+	position : absolute;
+	top : 20%;
+	left : 20%;
+	display : block;
+	margin-right : 40px;
+	float : left;
+}
+
+.footer .promotion {
+	position : absolute;
+	top : 22.5%;
+	left : 50%;
+	line-height : 
+}
+
+.footer .logos {
+	position : absolute;
+	bottom : 0;
+	left : 0;
+	width : 100%;
+	padding : 20px 0px;
+	clear : both;
+	background : #27ae60;
+}
+.footer .logos ul {
+	padding  : 0;
+	margin : 0;
+	text-align : center;
+	list-style-type : none;
+}
+
+.footer .logos ul li {
+display : inline-block;
+margin : 6px;
+padding : 10px 0px;
+}
+
+.footer .logos ul li a {
+	text-decoration : none;
+	color : black;
+	background : white;
+	font-size : 30px;
+	padding : 14px 16px;
+	box-shadow :0px 8px 10px -2px #000; 
+	text-align : center;
+	transition : 0.3s;
+	border-radius : 50%;
+}
+
+.footer .logos ul li a:hover {
+	opacity : 0.75;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

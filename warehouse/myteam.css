@@ -1,0 +1,189 @@
+body {
+	padding : 0;
+	margin : 0;
+	background : url(teamback.jpg) no-repeat;
+	background-size : cover; 
+	font-family : sans-serif;
+}
+
+.f_nav {
+	background : black;
+	box-shadow : 0px 6px 10px 0 rgba(0, 0, 0, 0.25);
+	margin-bottom : 10px;
+}
+.f_nav ul {
+	padding  : 0;
+	margin : 0;
+	list-style-type : none;
+}
+
+
+.f_nav ul li {
+	display : inline-block;
+}
+
+.f_nav ul li a {
+	display : block;
+	padding : 14px 16px;
+	text-align : center;
+	text-decoration : none;
+	font-size : 16px;
+	color : white;
+	transition : 1s;
+}
+
+.flink::after {
+	content : '';
+	height : 2px;
+	width : 0;
+	background : #fff;
+	display : block;
+	transition : width 0.3s;
+}
+
+.flink:hover::after {
+	width : 100%;
+	transition : width 0.3s;
+}
+
+
+.f_nav ul li input {
+	border : none;
+	background : transparent;
+	color : white;
+	padding : 2px;
+	font-weight : bold;
+	font-size : 16px;
+	
+	
+}
+
+.f_nav ul li input:active {
+	border-bottom : 2px solid white;
+}
+
+
+.heading {
+	position : relative;
+	width : 100%;
+	text-align : center;
+}
+.heading h1 {
+	color : black;
+	letter-spacing : 5px;
+	font-size : 71px;
+	font-family : broadway;
+}
+
+.team {
+	position : absolute;
+	top : 50%;
+	left : 50%;
+	transform : translate(-50%, -50%);
+}
+
+.team .member {
+	margin :0px 6px;
+	float : left;
+	
+}
+.team .member a {
+	display : block;
+	padding : 20px;
+	position : relative;
+	width : 175px;
+	height : 175px;
+	border-radius : 50%;
+	background : url(prat.jpg) no-repeat;
+	background-size : cover;
+	box-shadow : 0px 8px 16px rgba(0, 0, 0, 0.8);
+	transition : 0.3s;
+
+}
+
+.team .member a p{
+	display : none;
+	font-size : 21px;
+	color : black;
+	opacity : 1;
+	font-weight : bold;
+	position : absolute;
+	top : 25%;
+	left : 25%;
+	font-family: felix titling;
+	transform : translate(-25%, -25%;);
+	transition : 1s;
+}
+
+.team .member a:hover {
+	opacity : 0.6;
+	box-shadow : 0px 8px 16px -2px rgba(255, 255, 255, 1);
+}
+
+.team .member a:hover p{
+	display : block;
+}
+
+.footer {
+	clear : both;
+	position : relative;
+	width : 100%;
+	height : 600px;
+	background : #2ecc71;
+}
+.footer .company_info {
+	color : white;
+	line-height : 18px;
+	position : absolute;
+	top : 20%;
+	left : 20%;
+	display : block;
+	margin-right : 40px;
+	float : left;
+}
+
+.footer .promotion {
+	position : absolute;
+	top : 22.5%;
+	left : 50%;
+	line-height : 
+}
+
+.footer .logos {
+	position : absolute;
+	bottom : 0;
+	left : 0;
+	width : 100%;
+	padding : 20px 0px;
+	clear : both;
+	background : #27ae60;
+}
+.footer .logos ul {
+	padding  : 0;
+	margin : 0;
+	text-align : center;
+	list-style-type : none;
+}
+
+.footer .logos ul li {
+display : inline-block;
+margin : 6px;
+padding : 10px 0px;
+}
+
+.footer .logos ul li a {
+	text-decoration : none;
+	color : black;
+	background : white;
+	font-size : 30px;
+	padding : 14px 16px;
+	box-shadow :0px 8px 10px -2px #000; 
+	text-align : center;
+	transition : 0.3s;
+	border-radius : 50%;
+}
+
+.footer .logos ul li a:hover {
+	opacity : 0.75;
+}
+
